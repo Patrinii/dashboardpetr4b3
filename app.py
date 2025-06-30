@@ -6,7 +6,7 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, confusion_matrix
 
 st.set_page_config(layout="wide")
-st.markdown("# 📊 Dashboard de Análise PETR4")
+st.markdown("# Dashboard de Análise PETR4")
 
 # Carregamento dos dados
 @st.cache_data
@@ -71,7 +71,7 @@ modelo.fit(X_treino, y_treino)
 y_pred = modelo.predict(X_teste)
 
 # Avaliações
-st.subheader("📌 Avaliações Métricas")
+st.subheader("Avaliações Métricas")
 metricas = calcular_metricas(y_teste, y_pred)
 col1, col2, col3, col4, col5 = st.columns(5)
 col1.metric("Acurácia", f"{metricas['Acurácia']*100:.2f}%")
@@ -83,7 +83,7 @@ col5.metric("Especificidade", f"{metricas['Especificidade']*100:.2f}%")
 # Retorno Financeiro
 lucros_teste = df_teste["Profit"].values
 ganhos, perdas, total = simular_retorno(y_teste.values, y_pred, lucros_teste)
-st.subheader("💰 Retorno Financeiro")
+st.subheader("Retorno Financeiro")
 col6, col7, col8 = st.columns(3)
 col6.metric("Retorno de Ganhos", f"{ganhos:.2f}%")
 col7.metric("Retorno de Perdas", f"{perdas:.2f}%")
