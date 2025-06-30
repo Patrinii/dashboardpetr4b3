@@ -90,7 +90,7 @@ col7.metric("Retorno de Perdas", f"{perdas:.2f}%")
 col8.metric("Retorno Total", f"{total:.2f}%")
 
 # Gráficos
-st.subheader("📉 Gráficos Interativos")
+st.subheader("Gráficos Interativos")
 grafico = st.selectbox("Selecione o gráfico", ["Série Temporal Completa", "Distribuição da Variável Alvo"])
 
 if grafico == "Série Temporal Completa":
